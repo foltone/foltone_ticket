@@ -21,11 +21,9 @@ client_scripts {
     "client/libs/items/*.lua",
     "client/libs/panels/*.lua",
     "client/libs/windows/*.lua",
-    "client/cl_main.lua",
-    "client/cl_editable.lua"
+    "client/cl_main.lua"
 }
 
 server_script {
-    "server/sv_main.lua",
-    "server/sv_editable.lua"
+    "server/sv_main.lua"
 }
