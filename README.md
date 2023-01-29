@@ -1,7 +1,7 @@
 # foltone_ticket
 
 ## Description | FR
-Ce script pour FiveM est un menu de gestion de tickets pour les joueurs. Il permet aux joueurs de créer et de gérer des tickets pour signaler des problèmes ou des bugs sur le serveur. Il offre également des fonctionnalités pour les administrateurs, comme la possibilité de voir tous les tickets ouverts et de les fermer une fois résolus.
+Ce script pour FiveM est un menu de gestion de tickets pour les administrateurs. Il permet aux joueurs de créer et de gérer des tickets pour signaler des problèmes ou des bugs sur le serveur. Il offre également des fonctionnalités pour les administrateurs, comme la possibilité de voir tous les tickets ouverts et de les fermer une fois résolus.
 Le script est optimisé à 0,00 ms et configurable.
 Le script doit être configuré en fonction de votre serveur.
 
@@ -13,7 +13,7 @@ Le script doit être configuré en fonction de votre serveur.
 - Suppression du ticket lorsqu'un joueur se déconnecte
 
 ## Description | EN
-This script for FiveM is a ticket management menu for players. It allows players to create and manage tickets to report issues or bugs on the server. It also offers features for administrators, such as the ability to view all open tickets and close them once resolved. 
+This script for FiveM is a ticket management menu for administrators. It allows players to create and manage tickets to report problems or bugs on the server. It also offers features for administrators, such as the ability to see all open tickets and close them once resolved.
 The script is optimized at 0.00 ms and configurable. 
 The script needs to be configured according to your server.
 
