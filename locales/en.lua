@@ -1,0 +1,36 @@
+Locales["en"] = {
+    ["console_error"] = "You can't use this command from the server console.",
+    ["ticket_submitted"] = "~g~Your ticket has been submitted!",
+
+    ["name_menu"] = "Ticket",
+    ["description_menu"] = "menu ticket",
+    ["ticketList_menu"] = "Available tickets",
+    ["myTicketList_menu"] = "My tickets",
+    ["closeTicketList_menu"] = "Closed tickets",
+    ["optionTicket_menu"] = "Options",
+
+    ["available_ticket"] = "Available ticket",
+    ["my_ticket"] = "My ticket",
+    ["ticket_close"] = "Ticket close",
+    ["press_enter_get_ticket"] = "Press enter to take over ticket",
+
+    ["show_free_ticket"] = "Just show free tickets",
+    ["ticket_button"] = "[~b~%s~s~] - %s",
+    ["take_by"] = "Ticket take by : ~b~%s",
+
+    ["ticket_separator"] = "Ticket n°%s - %s",
+    ["bring_player"] = "Bring player",
+    ["goto_player"] = "Go to player",
+    ["teleport_player_to"] = "Teleport player to",
+    ["revive_player"] = "Revive player",
+    ["heal_player"] = "Heal player",
+    ["armor_player"] = "Set armor player",
+    ["kill_player"] = "Kill player",
+    ["freeze_player"] = "Freeze player",
+    ["unfreeze_player"] = "Unfreeze player",
+    ["open_ticket"] = "Open ticket",
+    ["open_take_ticket"] = "Open and take ticket",
+    ["giveup_ticket"] = "Give up ticket",
+    ["close_ticket"] = "Close ticket",
+    ["delete_ticket"] = "~r~Delete ticket",
+}

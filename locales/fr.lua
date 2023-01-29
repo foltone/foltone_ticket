@@ -1,0 +1,36 @@
+Locales["fr"] = {
+    ["console_error"] = "Vous ne pouvez pas utiliser cette commande depuis la console du serveur.",
+    ["ticket_submitted"] = "~g~Votre ticket a été soumis !",
+
+    ["name_menu"] = "Ticket",
+    ["description_menu"] = "menu ticket",
+    ["ticketList_menu"] = "Tickets disponibles",
+    ["myTicketList_menu"] = "Mes tickets",
+    ["closeTicketList_menu"] = "Tickets fermés",
+    ["optionTicket_menu"] = "Options",
+
+    ["available_ticket"] = "Ticket disponible",
+    ["my_ticket"] = "Mon ticket",
+    ["ticket_close"] = "Ticket fermé",
+    ["press_enter_get_ticket"] = "Appuyez sur entrée pour prendre le ticket",
+
+    ["show_free_ticket"] = "Afficher uniquement les tickets libres",
+    ["ticket_button"] = "[~b~%s~s~] - %s",
+    ["take_by"] = "Ticket pris par : ~b~%s",
+
+    ["ticket_separator"] = "Ticket n°%s - %s",
+    ["bring_player"] = "Amener le joueur",
+    ["goto_player"] = "Aller au joueur",
+    ["teleport_player_to"] = "Téléporter le joueur à",
+    ["revive_player"] = "Réanimer le joueur",
+    ["heal_player"] = "Soigner le joueur",
+    ["armor_player"] = "Mettre l'armure au joueur",
+    ["kill_player"] = "Tuer le joueur",
+    ["freeze_player"] = "Geler le joueur",
+    ["unfreeze_player"] = "Décongeler le joueur",
+    ["open_ticket"] = "Ouvrir le ticket",
+    ["open_take_ticket"] = "Ouvrir et prendre le ticket",
+    ["giveup_ticket"] = "Abandonner le ticket",
+    ["close_ticket"] = "Fermer le ticket",
+    ["delete_ticket"] = "~r~Supprimer le ticket",
+}
