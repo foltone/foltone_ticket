@@ -29,3 +29,6 @@ https://youtu.be/5WvTWMpKUcM
 
 ### Discord
 https://discord.gg/X9ReemrhKh
+
+## License
+Ce projet est sous licence ``Licence Affero GPL (AGPL)`` - voir le fichier [LICENSE](LICENSE) pour plus d'informations
