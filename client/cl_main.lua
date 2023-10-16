@@ -1,7 +1,7 @@
 local tableTickets = {}
 local ticketSelected;
 
-local function helpNotifcation(text)
+local function showNotification(text)
     SetNotificationTextEntry("STRING")
     AddTextComponentString(text)
     DrawNotification(false, false)
@@ -16,6 +16,9 @@ local function refreshTickets()
 end
 
 Citizen.CreateThread(function()
+    TriggerEvent("chat:addSuggestion", "/peport", "Report a player", {
+        { name="reason", help="Reason of the report" }
+    })
     refreshTickets()
 end)
 
@@ -64,7 +67,6 @@ function RageUI.PoolMenus:FoltoneTicket()
     end)
 
     myTicketList:IsVisible(function(Items)
-        --print("tickets: " .. json.encode(tableTickets))
         for k, v in pairs(tableTickets) do
             if v.admin == GetPlayerServerId(PlayerId()) and v.closed == false then
                 Items:AddButton(_U('ticket_button', v.permid, v.name), nil, { RightLabel = ">", IsDisabled = false }, function(onSelected)
@@ -92,6 +94,7 @@ function RageUI.PoolMenus:FoltoneTicket()
 
     optionTicket:IsVisible(function(Items)
         Items:AddSeparator(_U('ticket_separator', ticketSelected.permid, ticketSelected.name))
+        RageUI.Info("Reason : ", ticketSelected.message)
 
         -- teleport player to
         Items:AddList(_U("teleport_player_to"), Config.teleport_list, Config.teleport_list[ListIndex].name, ListIndex, nil, {RightLabel = "", IsDisabled = false }, function(Index, onSelected, onListChange)
@@ -172,7 +175,6 @@ end
 
 RegisterNetEvent("foltone_ticket:receiveTickets")
 AddEventHandler("foltone_ticket:receiveTickets", function(tickets)
-    --print("Tickets: " .. json.encode(tickets))
     tableTickets = tickets
 end)
 
@@ -182,7 +184,6 @@ AddEventHandler("foltone_ticket:openMenu", function()
 end)
 
 RegisterCommand("rpm", function(source, args, rawCommand)
-    print('test')
     TriggerServerEvent("foltone_ticket:getTickets")
     TriggerEvent("foltone_ticket:openMenu")
 end, false)
@@ -194,53 +195,47 @@ end)
 
 RegisterNetEvent("foltone_ticket:clientNotify")
 AddEventHandler("foltone_ticket:clientNotify", function(text)
-    helpNotifcation(text)
+    showNotification(text)
 end)
 
 RegisterNetEvent("foltone_ticket:revivePlayer")
 AddEventHandler("foltone_ticket:revivePlayer", function()
     local playerPed = PlayerPedId()
-    print("Revive player")
-    helpNotifcation("Player revived")
+    showNotification("Player revived")
     StopScreenEffect('DeathFailOut')
 end)
 
 RegisterNetEvent("foltone_ticket:healPlayer")
 AddEventHandler("foltone_ticket:healPlayer", function()
     local playerPed = PlayerPedId()
-    print("Heal player")
-    helpNotifcation("Player healed")
+    showNotification("Player healed")
     SetEntityHealth(playerPed, 200)
 end)
 
 RegisterNetEvent("foltone_ticket:armorPlayer")
 AddEventHandler("foltone_ticket:armorPlayer", function()
     local playerPed = PlayerPedId()
-    print("Armor player")
-    helpNotifcation("Player armored")
+    showNotification("Player armored")
     SetPedArmour(playerPed, 100)
 end)
 
 RegisterNetEvent("foltone_ticket:killPlayer")
 AddEventHandler("foltone_ticket:killPlayer", function()
     local playerPed = PlayerPedId()
-    print("Kill player")
-    helpNotifcation("Player killed")
+    showNotification("Player killed")
     SetEntityHealth(playerPed, 0)
 end)
 
 RegisterNetEvent("foltone_ticket:freezePlayer")
 AddEventHandler("foltone_ticket:freezePlayer", function()
     local playerPed = PlayerPedId()
-    print("Freeze player")
-    helpNotifcation("Player frozen")
+    showNotification("Player frozen")
     FreezeEntityPosition(playerPed, true)
 end)
 
 RegisterNetEvent("foltone_ticket:unfreezePlayer")
 AddEventHandler("foltone_ticket:unfreezePlayer", function()
     local playerPed = PlayerPedId()
-    print("Unfreeze player")
-    helpNotifcation("Player unfrozen")
+    showNotification("Player unfrozen")
     FreezeEntityPosition(playerPed, false)
 end)

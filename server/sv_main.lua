@@ -101,14 +101,19 @@ RegisterCommand("report", function(source, args, rawCommand)
         print(_U("console_error"))
         return
     else
-        for v, v in pairs(tableTickets) do
-            if v.id == _source and v.closed ~= true then
-                print("You already have a ticket open.")
-                return
+        if args == nil or args[1] == nil then
+            TriggerClientEvent("foltone_ticket:clientNotify", _source, _U("no_reason"))
+            return
+        else
+            for v, v in pairs(tableTickets) do
+                if v.id == _source and v.closed ~= true then
+                    print("You already have a ticket open.")
+                    return
+                end
             end
+            TriggerClientEvent("foltone_ticket:clientNotify", _source, _U("ticket_submitted"))
+            addTicket(_source, table.concat(args, " "))
         end
-        TriggerClientEvent("foltone_ticket:clientNotify", _source, _U("ticket_submitted"))
-        addTicket(_source, table.concat(args, " "))
     end
 end, false)
 

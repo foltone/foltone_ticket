@@ -1,6 +1,7 @@
 Locales["en"] = {
     ["console_error"] = "You can't use this command from the server console.",
     ["ticket_submitted"] = "~g~Your ticket has been submitted!",
+    ["no_reason"] = "You must put a reason!",
 
     ["name_menu"] = "Ticket",
     ["description_menu"] = "menu ticket",
